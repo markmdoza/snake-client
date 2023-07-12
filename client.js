@@ -15,6 +15,13 @@ const connect = function () {
     console.log(data);
   });
 
+  // Once a connection is established, log a message.
+  conn.on('connect', () => {
+    console.log('Successfully connected to game server,');
+    console.log('Name: MLM');
+  });
+
+
   return conn;
 };
 
