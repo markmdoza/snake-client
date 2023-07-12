@@ -17,10 +17,9 @@ const connect = function () {
 
   // Once a connection is established, log a message.
   conn.on('connect', () => {
-    console.log('Successfully connected to game server,');
-    console.log('Name: MLM');
+    console.log('Successfully connected to game server,', ('Name: MLM'));
+    //conn.write('Move: up'); <- This is a Move command.
   });
-
 
   return conn;
 };
