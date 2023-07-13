@@ -37,6 +37,8 @@ const handleUserInput = function (key) {
   connection.write('Move: down\n');
 } else if (key === 'd') {
   connection.write('Move: right\n');
+} else if (key === 'm') {
+  connection.write('Say: git gud\n');
 }
   };
 
