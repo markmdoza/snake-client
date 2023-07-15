@@ -1,9 +1,9 @@
-import { createConnection } from "net";
-import { IP, PORT } from './constants';
+const net = require("net");
+const { IP, PORT } = require('./constants');
 
 // establishes a connection with the game server
 const connect = function () {
-  const conn = createConnection({
+  const conn = net.createConnection({
     host: IP,      
     port: PORT,
   });
@@ -19,13 +19,12 @@ const connect = function () {
   // Once a connection is established, log a message.
   conn.on('connect', () => {
     console.log('Successfully connected to game server,', ('Name: MLM'));
-    //conn.write('Move: up'); <- This is a Move command.
   });
 
   return conn;
 };
 
-export default {
+module.exports = {
   net,
   connect
 };

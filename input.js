@@ -10,18 +10,11 @@ let connection;
 
 const setupInput = (conn) => { // We changed setupInput to accept an object that lets us interact with the server. The connect() function you wrote earlier returns just such an object.
   connection = conn;
-
   const stdin = process.stdin;
-  
   stdin.setRawMode(true);
-  
   stdin.setEncoding("utf8");
-  
   stdin.resume();
-  
   stdin.on("data", handleUserInput);
-  
-  
   return stdin;
 };
 
