@@ -32,10 +32,13 @@ const handleUserInput = function (key) {
   connection.write('Move: right\n');
 } else if (key === 'm') {
   connection.write('Say: git gud\n');
+} else if (key === 'h') {
+  connection.write('Say: Hey, everyone!\n');
+} else if (key === 'g') {
+  connection.write('Say: GGs\n');
 }
   };
 
   module.exports = {
     setupInput,
-    connection
   };
